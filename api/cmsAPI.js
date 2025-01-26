@@ -14,7 +14,7 @@ const current_URL_Location = () => {
 
 // Check the current URL and display the data
 const checkURL = (currentURL) => {
-  if(currentURL === "index.html"){
+  if(currentURL === "index.html" || currentURL === ""){
     indexDisplayData(fetchedData);
   }
   if(currentURL === "users.html") {
@@ -64,7 +64,7 @@ async function fetchAdminData() {
   
 const fetchApi = async (url, page = 1, limit = 10) => {
     let fetchurl = '';
-    if (current_URL_Location() !== "index.html") {
+    if (current_URL_Location() !== "index.html" && current_URL_Location() !== "") {
         fetchurl = `${url}?page=${page}&limit=${limit}`;
     } else {
       fetchurl = url;
@@ -86,7 +86,7 @@ const fetchApi = async (url, page = 1, limit = 10) => {
 // Fetch the Endpoints at the same time
 const fetchAllApis = async (page) => {
     try {
-      if(current_URL_Location() === "index.html"){
+      if(current_URL_Location() === "index.html" || current_URL_Location() === ""){
         // Deconstruct the data fetched from the API
       const [postData, userData, groupData, commentData] = await Promise.all([
         
