@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="styles/groups.css">
     <title>Group Information</title>
-    <script type="text/javascript" src="api/cmsAPI.js"></script>
-    <script type="text/javascript" src="api/request/api_request.js"></script>
-    <script type="text/javascript" src="theme.js"></script>
-    <script type="text/javascript" src="api/groups/view_group.js"></script>
+    <script type="text/javascript" src="api/cmsAPI.js" defer></script>
+    <script type="text/javascript" src="api/request/api_request.js" defer></script>
+    <script type="text/javascript" src="theme.js" defer></script>
+    <script type="text/javascript" src="api/groups/view_group.js" defer></script>
 </head>
 <body>
     <header>
@@ -113,10 +113,8 @@
             </div>
         </div>
     </main>
-
-    <script> if(!token)  window.location.href = '../../auth/login.html'; </script>
-    <script type="text/javascript" src="api/auth/logout.js"></script>
-    <script type="text/javascript" src="api/admin/delete_account.js"></script>
-    <script type="text/javascript" src="api/field_check/cmsFieldErrors.js"></script>
+    <script type="text/javascript" src="api/auth/logout.js" defer></script>
+    <script type="text/javascript" src="api/admin/delete_account.js" defer></script>
+    <script type="text/javascript" src="api/field_check/cmsFieldErrors.js" defer></script>
 </body>
 </html>

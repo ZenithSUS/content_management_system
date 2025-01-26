@@ -52,7 +52,19 @@ const indexDisplayData = (data) => {
 
     if(data){
       overallData(data);
-      recentPosts(data.posts);
-      mostFriends(sortTotalFriends(data.users.data));
+
+      if(data.posts.data.length > 0){
+        recentPosts(data.posts);
+      } else {
+        const recentPostsContainer = document.getElementById('recentPosts-container');
+        recentPostsContainer.innerHTML = `<h3>No recent posts found.</h3>`;
+      }
+
+      if(data.users.data.length > 0){
+        mostFriends(sortTotalFriends(data.users.data));
+      } else {
+        const mostFriendsContainer = document.getElementById('mostfriends-container');
+        mostFriendsContainer.innerHTML = `<h3>No users found.</h3>`;
+      }
     }
 }

@@ -38,6 +38,11 @@ const user_id = localStorage.getItem('user_id');
 const theme = localStorage.getItem('theme');
 const font_style = localStorage.getItem('font-style');
 
+// Check if the user is authenticated
+if(!token) {
+    window.location.href = 'auth/login.html';
+}
+
 // Object to store the fetched data
 let fetchedData;
 
@@ -124,7 +129,7 @@ const fetchAllApis = async (page) => {
         const commentData = await fetchApi(comments_url, page);
         fetchedData = { comments: commentData };
       }
-      
+
     
     } catch (error) {
       console.error("Error fetching data:", error);
