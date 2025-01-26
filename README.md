@@ -1,4 +1,4 @@
-# ﻿content_managent_system
+# ﻿content_management_system
 This system is Content Management System the manages the overall data of GreekMyth Web system app 
 The data is fetched using api with a Restful API structure to secure the data 
 
